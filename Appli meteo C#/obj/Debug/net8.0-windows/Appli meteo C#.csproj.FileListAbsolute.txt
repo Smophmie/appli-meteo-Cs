@@ -1,0 +1,17 @@
+C:\wamp64\www\Appli meteo C#\Appli meteo C#\bin\Debug\net8.0-windows\Appli meteo C#.exe
+C:\wamp64\www\Appli meteo C#\Appli meteo C#\bin\Debug\net8.0-windows\Appli meteo C#.deps.json
+C:\wamp64\www\Appli meteo C#\Appli meteo C#\bin\Debug\net8.0-windows\Appli meteo C#.runtimeconfig.json
+C:\wamp64\www\Appli meteo C#\Appli meteo C#\bin\Debug\net8.0-windows\Appli meteo C#.dll
+C:\wamp64\www\Appli meteo C#\Appli meteo C#\bin\Debug\net8.0-windows\Appli meteo C#.pdb
+C:\wamp64\www\Appli meteo C#\Appli meteo C#\obj\Debug\net8.0-windows\Appli_meteo_C_.Form1.resources
+C:\wamp64\www\Appli meteo C#\Appli meteo C#\obj\Debug\net8.0-windows\Appli_meteo_C_.Properties.Resources.resources
+C:\wamp64\www\Appli meteo C#\Appli meteo C#\obj\Debug\net8.0-windows\Appli meteo C#.csproj.GenerateResource.cache
+C:\wamp64\www\Appli meteo C#\Appli meteo C#\obj\Debug\net8.0-windows\Appli meteo C#.GeneratedMSBuildEditorConfig.editorconfig
+C:\wamp64\www\Appli meteo C#\Appli meteo C#\obj\Debug\net8.0-windows\Appli meteo C#.AssemblyInfoInputs.cache
+C:\wamp64\www\Appli meteo C#\Appli meteo C#\obj\Debug\net8.0-windows\Appli meteo C#.AssemblyInfo.cs
+C:\wamp64\www\Appli meteo C#\Appli meteo C#\obj\Debug\net8.0-windows\Appli meteo C#.csproj.CoreCompileInputs.cache
+C:\wamp64\www\Appli meteo C#\Appli meteo C#\obj\Debug\net8.0-windows\Appli meteo C#.dll
+C:\wamp64\www\Appli meteo C#\Appli meteo C#\obj\Debug\net8.0-windows\refint\Appli meteo C#.dll
+C:\wamp64\www\Appli meteo C#\Appli meteo C#\obj\Debug\net8.0-windows\Appli meteo C#.pdb
+C:\wamp64\www\Appli meteo C#\Appli meteo C#\obj\Debug\net8.0-windows\Appli meteo C#.genruntimeconfig.cache
+C:\wamp64\www\Appli meteo C#\Appli meteo C#\obj\Debug\net8.0-windows\ref\Appli meteo C#.dll
