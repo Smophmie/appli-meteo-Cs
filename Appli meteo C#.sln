@@ -3,9 +3,12 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.10.34916.146
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Appli meteo C#", "Appli meteo C#\Appli meteo C#.csproj", "{CC50AEF5-90FA-4AA9-95E5-DC15DC82E1D2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Appli meteo C#", "Appli meteo C#\Appli meteo C#.csproj", "{CC50AEF5-90FA-4AA9-95E5-DC15DC82E1D2}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Éléments de solution", "Éléments de solution", "{ECFBA4E5-DE39-4999-93AB-C0533457124C}"
+	ProjectSection(SolutionItems) = preProject
+		.gitignore = .gitignore
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

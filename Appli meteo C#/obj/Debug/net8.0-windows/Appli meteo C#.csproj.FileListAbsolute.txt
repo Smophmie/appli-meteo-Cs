@@ -15,3 +15,7 @@ C:\wamp64\www\Appli meteo C#\Appli meteo C#\obj\Debug\net8.0-windows\refint\Appl
 C:\wamp64\www\Appli meteo C#\Appli meteo C#\obj\Debug\net8.0-windows\Appli meteo C#.pdb
 C:\wamp64\www\Appli meteo C#\Appli meteo C#\obj\Debug\net8.0-windows\Appli meteo C#.genruntimeconfig.cache
 C:\wamp64\www\Appli meteo C#\Appli meteo C#\obj\Debug\net8.0-windows\ref\Appli meteo C#.dll
+C:\wamp64\www\Appli meteo C#\Appli meteo C#\bin\Debug\net8.0-windows\Newtonsoft.Json.dll
+C:\wamp64\www\Appli meteo C#\Appli meteo C#\obj\Debug\net8.0-windows\Appli meteo C#.csproj.AssemblyReference.cache
+C:\wamp64\www\Appli meteo C#\Appli meteo C#\obj\Debug\net8.0-windows\Appli meteo C#.sourcelink.json
+C:\wamp64\www\Appli meteo C#\Appli meteo C#\obj\Debug\net8.0-windows\Appli me.CA325156.Up2Date
