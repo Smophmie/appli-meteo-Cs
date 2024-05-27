@@ -1,4 +1,5 @@
 using Newtonsoft.Json;
+using System;
 using System.Net;
 
 namespace Appli_meteo_C_
@@ -11,8 +12,6 @@ namespace Appli_meteo_C_
         }
 
         string APIKey = "e4b03256d47dcbd2ed577892d6a30cd8";
-        double lon = 3.381074;
-        double lat = 45.7164954;
 
 
         private void label2_Click(object sender, EventArgs e)
@@ -29,38 +28,35 @@ namespace Appli_meteo_C_
         {
             using (WebClient web = new WebClient())
             {
-                string url = string.Format("https://api.openweathermap.org/data/2.5/weather?lat={0}&lon={1}&appid={2}&lang=fr&units=metric", lat, lon, APIKey);
+                string url = string.Format("https://api.openweathermap.org/data/2.5/weather?q={0}&appid={1}&lang=fr&units=metric", TBcity.Text, APIKey);
                 var json = web.DownloadString(url);
                 WeatherInfos.root Infos = JsonConvert.DeserializeObject<WeatherInfos.root>(json);
 
-                picIcon.ImageLocation = "https://openweathermap.org/img/w/" + Infos.weather[0].icon + ".png";
-                lab2.Text = Infos.weather[0].main;
-                lab4.Text = Infos.weather[0].description;
-                lab6.Text = convertDateTime(Infos.sys.sunrise).ToString("HH:mm");
-                lab8.Text = convertDateTime(Infos.sys.sunset).ToString("HH:mm");
-
-                lab10.Text = Infos.wind.speed.ToString();
+                string iconUrl = "https://openweathermap.org/img/w/" + Infos.weather[0].icon + ".png";
+                picIcon.ImageLocation = iconUrl;
+                
+                weatherData.Text = Infos.weather[0].description;
 
 
-            }
+                double windSpeedKmH = Infos.wind.speed * 3.6; // Conversion de m/s en km/h
+                windSpeed.Text = windSpeedKmH.ToString("00") + " km/h";
 
-            DateTime convertDateTime(long sec)
-            {
-                DateTime day = new DateTime(1970, 1, 1, 0, 0, 0, 0, System.DateTimeKind.Utc).ToLocalTime();
-                day = day.AddSeconds(sec);
-                return day;
+                int timezoneOffset = Infos.timezone;
+
+                // Conversion des heures de lever et de coucher du soleil
+                sunriseData.Text = convertDateTime(Infos.sys.sunrise, timezoneOffset).ToString("HH:mm");
+                sunsetData.Text = convertDateTime(Infos.sys.sunset, timezoneOffset).ToString("HH:mm");
+
+                messageBox.Text = iconUrl;
             }
 
         }
 
-        private void label2_Click_1(object sender, EventArgs e)
+        DateTime convertDateTime(long unixTime, int timezoneOffset)
         {
-
-        }
-
-        private void Form1_Load(object sender, EventArgs e)
-        {
-
+            DateTime epoch = new DateTime(1970, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc);
+            DateTime dateTime = epoch.AddSeconds(unixTime).AddSeconds(timezoneOffset).ToLocalTime();
+            return dateTime;
         }
     }
 }

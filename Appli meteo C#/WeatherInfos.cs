@@ -50,6 +50,8 @@ namespace Appli_meteo_C_
             public main main { get; set; }
             public wind wind { get; set; }  
             public sys sys { get; set; }
+
+            public int timezone { get; set; }
         }
     }
 }

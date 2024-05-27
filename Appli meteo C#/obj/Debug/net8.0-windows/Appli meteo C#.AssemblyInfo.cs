@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Appli meteo C#")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+25a73a88191da648968691b65d7383aeae850e33")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+4bc4e663bb33e9a747032e3a06edf2e18a092dbb")]
 [assembly: System.Reflection.AssemblyProductAttribute("Appli meteo C#")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Appli meteo C#")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
