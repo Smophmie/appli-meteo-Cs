@@ -34,7 +34,6 @@
             btnSearch = new Button();
             Conditions = new Label();
             labWindSpeed = new Label();
-            picIcon = new PictureBox();
             labConditions = new Label();
             label2 = new Label();
             weatherData = new Label();
@@ -43,8 +42,8 @@
             sunriseData = new Label();
             labSunrise = new Label();
             labSunset = new Label();
-            messageBox = new TextBox();
-            ((System.ComponentModel.ISupportInitialize)picIcon).BeginInit();
+            labTemp = new Label();
+            tempData = new Label();
             SuspendLayout();
             // 
             // label1
@@ -90,7 +89,7 @@
             Conditions.BackColor = Color.Transparent;
             Conditions.Font = new Font("Cambria", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
             Conditions.ForeColor = Color.White;
-            Conditions.Location = new Point(130, 181);
+            Conditions.Location = new Point(192, 181);
             Conditions.Name = "Conditions";
             Conditions.Size = new Size(205, 25);
             Conditions.TabIndex = 5;
@@ -102,21 +101,11 @@
             labWindSpeed.BackColor = Color.Transparent;
             labWindSpeed.Font = new Font("Cambria", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
             labWindSpeed.ForeColor = Color.White;
-            labWindSpeed.Location = new Point(130, 225);
+            labWindSpeed.Location = new Point(192, 269);
             labWindSpeed.Name = "labWindSpeed";
             labWindSpeed.Size = new Size(161, 25);
             labWindSpeed.TabIndex = 7;
             labWindSpeed.Text = "Vitesse du vent :";
-            // 
-            // picIcon
-            // 
-            picIcon.BackColor = Color.Transparent;
-            picIcon.Location = new Point(582, 167);
-            picIcon.Name = "picIcon";
-            picIcon.Size = new Size(129, 108);
-            picIcon.SizeMode = PictureBoxSizeMode.Zoom;
-            picIcon.TabIndex = 8;
-            picIcon.TabStop = false;
             // 
             // labConditions
             // 
@@ -124,7 +113,7 @@
             labConditions.BackColor = Color.Transparent;
             labConditions.Font = new Font("Cambria", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
             labConditions.ForeColor = Color.White;
-            labConditions.Location = new Point(303, 167);
+            labConditions.Location = new Point(365, 167);
             labConditions.Name = "labConditions";
             labConditions.Size = new Size(0, 25);
             labConditions.TabIndex = 9;
@@ -135,7 +124,7 @@
             label2.BackColor = Color.Transparent;
             label2.Font = new Font("Cambria", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label2.ForeColor = Color.White;
-            label2.Location = new Point(303, 167);
+            label2.Location = new Point(365, 167);
             label2.Name = "label2";
             label2.Size = new Size(0, 25);
             label2.TabIndex = 10;
@@ -146,7 +135,7 @@
             weatherData.BackColor = Color.Transparent;
             weatherData.Font = new Font("Cambria", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
             weatherData.ForeColor = Color.White;
-            weatherData.Location = new Point(341, 181);
+            weatherData.Location = new Point(403, 181);
             weatherData.Name = "weatherData";
             weatherData.Size = new Size(169, 25);
             weatherData.TabIndex = 12;
@@ -158,7 +147,7 @@
             windSpeed.BackColor = Color.Transparent;
             windSpeed.Font = new Font("Cambria", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
             windSpeed.ForeColor = Color.White;
-            windSpeed.Location = new Point(341, 225);
+            windSpeed.Location = new Point(403, 269);
             windSpeed.Name = "windSpeed";
             windSpeed.Size = new Size(169, 25);
             windSpeed.TabIndex = 16;
@@ -170,7 +159,7 @@
             sunsetData.BackColor = Color.Transparent;
             sunsetData.Font = new Font("Cambria", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
             sunsetData.ForeColor = Color.White;
-            sunsetData.Location = new Point(341, 326);
+            sunsetData.Location = new Point(403, 370);
             sunsetData.Name = "sunsetData";
             sunsetData.Size = new Size(169, 25);
             sunsetData.TabIndex = 17;
@@ -182,7 +171,7 @@
             sunriseData.BackColor = Color.Transparent;
             sunriseData.Font = new Font("Cambria", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
             sunriseData.ForeColor = Color.White;
-            sunriseData.Location = new Point(341, 273);
+            sunriseData.Location = new Point(403, 317);
             sunriseData.Name = "sunriseData";
             sunriseData.Size = new Size(169, 25);
             sunriseData.TabIndex = 18;
@@ -194,7 +183,7 @@
             labSunrise.BackColor = Color.Transparent;
             labSunrise.Font = new Font("Cambria", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
             labSunrise.ForeColor = Color.White;
-            labSunrise.Location = new Point(130, 273);
+            labSunrise.Location = new Point(192, 317);
             labSunrise.Name = "labSunrise";
             labSunrise.Size = new Size(156, 25);
             labSunrise.TabIndex = 19;
@@ -206,18 +195,35 @@
             labSunset.BackColor = Color.Transparent;
             labSunset.Font = new Font("Cambria", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
             labSunset.ForeColor = Color.White;
-            labSunset.Location = new Point(130, 326);
+            labSunset.Location = new Point(192, 370);
             labSunset.Name = "labSunset";
             labSunset.Size = new Size(180, 25);
             labSunset.TabIndex = 20;
             labSunset.Text = "Coucher du soleil :";
             // 
-            // messageBox
+            // labTemp
             // 
-            messageBox.Location = new Point(250, 388);
-            messageBox.Name = "messageBox";
-            messageBox.Size = new Size(461, 23);
-            messageBox.TabIndex = 21;
+            labTemp.AutoSize = true;
+            labTemp.BackColor = Color.Transparent;
+            labTemp.Font = new Font("Cambria", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            labTemp.ForeColor = Color.White;
+            labTemp.Location = new Point(193, 225);
+            labTemp.Name = "labTemp";
+            labTemp.Size = new Size(144, 25);
+            labTemp.TabIndex = 21;
+            labTemp.Text = "Température  :";
+            // 
+            // tempData
+            // 
+            tempData.AutoSize = true;
+            tempData.BackColor = Color.Transparent;
+            tempData.Font = new Font("Cambria", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            tempData.ForeColor = Color.White;
+            tempData.Location = new Point(404, 225);
+            tempData.Name = "tempData";
+            tempData.Size = new Size(169, 25);
+            tempData.TabIndex = 22;
+            tempData.Text = "non communiqué";
             // 
             // Form1
             // 
@@ -226,7 +232,8 @@
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(800, 450);
-            Controls.Add(messageBox);
+            Controls.Add(tempData);
+            Controls.Add(labTemp);
             Controls.Add(labSunset);
             Controls.Add(labSunrise);
             Controls.Add(sunriseData);
@@ -235,7 +242,6 @@
             Controls.Add(weatherData);
             Controls.Add(label2);
             Controls.Add(labConditions);
-            Controls.Add(picIcon);
             Controls.Add(labWindSpeed);
             Controls.Add(Conditions);
             Controls.Add(btnSearch);
@@ -244,7 +250,6 @@
             DoubleBuffered = true;
             Name = "Form1";
             Text = "Form1";
-            ((System.ComponentModel.ISupportInitialize)picIcon).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -257,7 +262,6 @@
         private Label lab1;
         private Label Conditions;
         private Label labWindSpeed;
-        private PictureBox picIcon;
         private Label labConditions;
         private Label label2;
         private Label lab2;
@@ -267,6 +271,7 @@
         private Label sunriseData;
         private Label labSunrise;
         private Label labSunset;
-        private TextBox messageBox;
+        private Label labTemp;
+        private Label tempData;
     }
 }

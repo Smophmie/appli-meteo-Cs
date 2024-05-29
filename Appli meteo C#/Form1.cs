@@ -31,12 +31,10 @@ namespace Appli_meteo_C_
                 string url = string.Format("https://api.openweathermap.org/data/2.5/weather?q={0}&appid={1}&lang=fr&units=metric", TBcity.Text, APIKey);
                 var json = web.DownloadString(url);
                 WeatherInfos.root Infos = JsonConvert.DeserializeObject<WeatherInfos.root>(json);
-
-                string iconUrl = "https://openweathermap.org/img/w/" + Infos.weather[0].icon + ".png";
-                picIcon.ImageLocation = iconUrl;
                 
                 weatherData.Text = Infos.weather[0].description;
 
+                tempData.Text = Infos.main.temp + "°C";
 
                 double windSpeedKmH = Infos.wind.speed * 3.6; // Conversion de m/s en km/h
                 windSpeed.Text = windSpeedKmH.ToString("00") + " km/h";
@@ -46,8 +44,6 @@ namespace Appli_meteo_C_
                 // Conversion des heures de lever et de coucher du soleil
                 sunriseData.Text = convertDateTime(Infos.sys.sunrise, timezoneOffset).ToString("HH:mm");
                 sunsetData.Text = convertDateTime(Infos.sys.sunset, timezoneOffset).ToString("HH:mm");
-
-                messageBox.Text = iconUrl;
             }
 
         }
